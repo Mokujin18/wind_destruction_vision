@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { GoogleGenAI } from '@google/genai';
+import * as process from 'node:process';
 
 @Injectable()
 export class AiService {
@@ -7,7 +8,7 @@ export class AiService {
 
   constructor() {
     this.ai = new GoogleGenAI({
-      apiKey: 'AIzaSyCDZm1wAMqjm1CMSghfOiZ83-N3Yrgo4q4',
+      apiKey: process.env.AI_API_KEY,
     });
   }
 }

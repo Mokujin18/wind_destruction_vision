@@ -8,7 +8,6 @@ export class WatchController {
 
   @Post('/analyze')
   analyze(@Body() analyzeDto: AnalyzeDto) {
-    console.log(analyzeDto);
     return this.watchService.analyzeImages(analyzeDto.images);
   }
 }
