@@ -46,7 +46,6 @@ export class WatchService {
         generated_at: new Date().toISOString(),
       };
     } catch (error) {
-      console.log(error);
       throw new InternalServerErrorException();
     }
   }
